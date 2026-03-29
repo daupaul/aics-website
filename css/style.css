@@ -560,6 +560,7 @@ section { padding-block: var(--section-pad); }
   border: 1px solid var(--border-soft);
   border-radius: var(--radius-lg);
   padding: 2.5rem;
+  min-width: 0;
 }
 .contact__info-card h3 { margin-bottom: 0.75rem; }
 .contact__info-card > p { font-size: 0.9rem; margin-bottom: 2rem; }
@@ -593,6 +594,8 @@ section { padding-block: var(--section-pad); }
   font-size: 0.9rem;
   color: var(--text);
   line-height: 1.5;
+  word-break: break-word;
+  overflow-wrap: break-word;
 }
 .contact__detail-text a:hover { color: var(--accent); }
 /* Form */
@@ -601,6 +604,7 @@ section { padding-block: var(--section-pad); }
   border: 1px solid var(--border-soft);
   border-radius: var(--radius-lg);
   padding: 2.5rem;
+  min-width: 0;
 }
 .form-row { display: grid; grid-template-columns: 1fr 1fr; gap: 1rem; }
 .form-group { display: flex; flex-direction: column; gap: 0.5rem; margin-bottom: 1rem; }
@@ -909,6 +913,10 @@ section { padding-block: var(--section-pad); }
 
   /* Nav mobile menu: smaller font */
   .nav__mobile a { font-size: 1.5rem; }
+
+  /* Contact cards: tighter padding on small phones */
+  .contact__info-card,
+  .contact-form { padding: 1.5rem; }
 
   /* Client logos: full row */
   .client-logo { min-width: calc(50% - 1.5rem); flex: 1; }
